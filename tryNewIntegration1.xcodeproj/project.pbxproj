@@ -12,7 +12,21 @@
 		7BEBA57820E2734F0082987A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEBA57620E2734F0082987A /* Main.storyboard */; };
 		7BEBA57A20E273500082987A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BEBA57920E273500082987A /* Assets.xcassets */; };
 		7BEBA57D20E273500082987A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEBA57B20E273500082987A /* LaunchScreen.storyboard */; };
+		7BEBA59720E279D40082987A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEBA59520E279D40082987A /* Crashlytics.framework */; };
+		7BEBA59820E279D40082987A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEBA59620E279D40082987A /* Fabric.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7BEBA59320E279930082987A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7BEBA56F20E2734F0082987A /* tryNewIntegration1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tryNewIntegration1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +36,9 @@
 		7BEBA57920E273500082987A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BEBA57C20E273500082987A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BEBA57E20E273500082987A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BEBA59120E277B60082987A /* tryNewIntegration1 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "tryNewIntegration1 copy-Info.plist"; path = "/Users/hariprasath/Desktop/tryNewIntegration1/tryNewIntegration1 copy-Info.plist"; sourceTree = "<absolute>"; };
+		7BEBA59520E279D40082987A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		7BEBA59620E279D40082987A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BEBA59720E279D40082987A /* Crashlytics.framework in Frameworks */,
+				7BEBA59820E279D40082987A /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,7 @@
 			children = (
 				7BEBA57120E2734F0082987A /* tryNewIntegration1 */,
 				7BEBA57020E2734F0082987A /* Products */,
+				7BEBA59120E277B60082987A /* tryNewIntegration1 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +76,8 @@
 			children = (
 				7BEBA57220E2734F0082987A /* AppDelegate.swift */,
 				7BEBA57420E2734F0082987A /* ViewController.swift */,
+				7BEBA59520E279D40082987A /* Crashlytics.framework */,
+				7BEBA59620E279D40082987A /* Fabric.framework */,
 				7BEBA57620E2734F0082987A /* Main.storyboard */,
 				7BEBA57920E273500082987A /* Assets.xcassets */,
 				7BEBA57B20E273500082987A /* LaunchScreen.storyboard */,
@@ -74,6 +96,8 @@
 				7BEBA56B20E2734F0082987A /* Sources */,
 				7BEBA56C20E2734F0082987A /* Frameworks */,
 				7BEBA56D20E2734F0082987A /* Resources */,
+				7BEBA59320E279930082987A /* CopyFiles */,
+				7BEBA59420E279960082987A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -129,6 +153,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BEBA59420E279960082987A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 80efbce721b7fdd0231ea584c6604b0c800081c9 c050479743ce2b197b726fe3187601f7f1d888d74678c87f4be2df20692042a2";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BEBA56B20E2734F0082987A /* Sources */ = {
@@ -282,6 +322,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MF4P8F9LXV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = tryNewIntegration1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +344,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MF4P8F9LXV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = tryNewIntegration1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
